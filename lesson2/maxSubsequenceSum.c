@@ -2,22 +2,27 @@
 #include <stdlib.h>
 #include <time.h>
 int main() {
-	int array[1000], i, temp;
+	int array[3000], i, temp;
 	clock_t  t_start, t_end;
 	srand((unsigned)time(NULL));//用当前时间，设置种子 
-	for (i = 0; i < 1000; i ++) {
-		temp = rand()%100;
+	for (i = 0; i < 3000; i ++) {
+		temp = rand()%1000;
 		if (temp % 2) temp = -temp;
 		array[i] = temp;
 	}
-	t_start = time((time_t*)NULL) ;
-	temp = maxSubsequenceSum1(array, 1000);
-	t_end = time((time_t*)NULL) ;
+	t_start = clock() ;
+	temp = maxSubsequenceSum1(array, 3000);
+	t_end = clock() ;
 	printf("最大序列为:%d, 执行时间为:%d ms\n",temp, t_end - t_start);
 
-    t_start = time((time_t*)NULL) ;
-	temp = maxSubsequenceSum2(array, 1000);
-	t_end = time((time_t*)NULL) ;
+	t_start = clock() ;
+	temp = maxSubsequenceSum2(array, 3000);
+	t_end = clock() ;
+	printf("最大序列为:%d, 执行时间为:%d ms\n",temp, t_end - t_start);
+
+	t_start = clock() ;
+	temp = maxSubsequenceSum3(array, 3000);
+	t_end = clock() ;
 	printf("最大序列为:%d, 执行时间为:%d ms\n",temp, t_end - t_start);
 	getchar();
 	return 0;
@@ -51,4 +56,43 @@ int maxSubsequenceSum2(int A[], int N) {
 		}
 	}
 	return MaxSum;
+}
+
+int maxSubSum(int A[], int left, int right){
+	int MaxLeftSum, MaxRightSum;
+	int MaxLeftBorderSum, MaxRightBorderSum;
+	int LeftBorderSum, RightBorerSum;
+	int Center, i;
+	if(left == right){
+		if(A[left]  > 0)
+			return A[left];
+		else
+			return 0;
+	}
+	Center = (left + right) / 2;
+	MaxLeftSum = maxSubSum(A, left, Center);
+	MaxRightSum = maxSubSum(A, Center + 1, right);
+
+	MaxLeftBorderSum = 0;LeftBorderSum = 0;
+	for (i = Center; i >= left; i --){
+		LeftBorderSum += A[i];
+		if(LeftBorderSum > MaxLeftBorderSum)
+			MaxLeftBorderSum = LeftBorderSum;
+	}
+	MaxRightBorderSum = 0; RightBorerSum = 0;
+	for (i = Center + 1; i <= right; i ++){
+		RightBorerSum += A[i];
+		if(RightBorerSum > MaxRightBorderSum)
+			MaxRightBorderSum = RightBorerSum;
+	}
+
+	return Max3(MaxLeftSum, MaxRightSum, MaxLeftBorderSum + MaxRightBorderSum);
+}
+int maxSubsequenceSum3(int A[], int N) {
+	return maxSubSum(A, 0, N -1);
+}
+
+int Max3(int a, int b, int c){
+	int temp = a > b ? a :b;
+	return temp > c ? temp : c;
 }
