@@ -4,11 +4,12 @@ fs.readFile("src.txt", function (err, data) {
         console.log("Open file src.txt Error: " + err.message);
         process.exit(-1);
     } else {
-        data = data.toString("utf-8").split("\n").map(function(value){
+        data = data.toString("utf-8").split("\n").map(function (value) {
             return parseInt(value);
         });
+        console.time("JavaScript版merge_sort:");
         merge_sort(data);
-        console.log(data);
+        console.timeEnd("JavaScript版merge_sort:")
     }
 })
 
@@ -30,24 +31,24 @@ function merge(data, dataTemp, leftPos, rightPos, rightEnd) {
     var leftEnd = rightPos - 1,
         tempPos = leftPos,
         total = (rightEnd - leftPos + 1);
-        
-     while(leftPos <= leftEnd && rightPos <= rightEnd) {
-         if(data[leftPos] < data[rightPos]) {
-             dataTemp[tempPos ++] = data[leftPos ++];
-         } else {
-              dataTemp[tempPos ++] = data[rightPos ++];
-         }
-     }
-     
-     while(leftPos <= leftEnd){
-          dataTemp[tempPos ++] = data[leftPos ++];
-     }
 
-     while(rightPos <= rightEnd) {
-         dataTemp[tempPos ++] = data[rightPos ++];
-     }
-     
-     for(var i = 0; i < total; i ++, rightEnd --) {
-         data[rightEnd] = dataTemp[rightEnd];
-     }
+    while (leftPos <= leftEnd && rightPos <= rightEnd) {
+        if (data[leftPos] < data[rightPos]) {
+            dataTemp[tempPos++] = data[leftPos++];
+        } else {
+            dataTemp[tempPos++] = data[rightPos++];
+        }
+    }
+
+    while (leftPos <= leftEnd) {
+        dataTemp[tempPos++] = data[leftPos++];
+    }
+
+    while (rightPos <= rightEnd) {
+        dataTemp[tempPos++] = data[rightPos++];
+    }
+
+    for (var i = 0; i < total; i++ , rightEnd--) {
+        data[rightEnd] = dataTemp[rightEnd];
+    }
 }

@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "../common.h"
 void merge_sort(int * data, int num); 
 void m_sort(int * data, int * datatemp, int left, int right);
 void merge(int * data, int * dataTemp, int left, int leftEnd, int rightEnd);
@@ -14,7 +15,7 @@ int main(){
     int data_size = 100000;// 测试数据的大小
     int *data = (int*) malloc(sizeof(int) * data_size),temp, i;
     time_t start, end;
-    file = fopen("src.txt", "r");
+    file = fopen("../src.txt", "r");
     if(file) {
         for(i = 0; i < data_size && !feof(file); i ++) {
             fscanf(file, "%d", &temp);
@@ -24,6 +25,7 @@ int main(){
         merge_sort(data, data_size);
         end = clock();
         printf("C语言版merge_sort: %dms", end - start);
+        save("sorted.txt", data, data_size);
     } else {
         printf("open file src.txt error!");
     }
@@ -52,10 +54,10 @@ void m_sort(int * data, int * dataTemp, int left, int right) {
 }
 
 void merge(int * data, int *dataTemp, int leftPos, int rightPos, int rightEnd){
-    int leftEnd = rightPos - 1,
+    int leftEnd = rightPos - 1, // 左边界
         tempPos = leftPos, 
         i,
-        total = (rightEnd - leftPos + 1);
+        total = (rightEnd - leftPos + 1); 
         
     while(leftPos <= leftEnd && rightPos <= rightEnd) {
         if(data[leftPos] < data[rightPos]) {
