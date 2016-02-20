@@ -11,7 +11,7 @@ void print(int*, int);
 void save(char*, int*, int); // 存储到文件
 int main(){
     FILE * file;
-    int data_size = 100000;// 测试数据的大小
+    int data_size = 10000000;// 测试数据的大小
     int *data = (int*) malloc(sizeof(int) * data_size),temp, i;
     time_t start, end;
     file = fopen("../src.txt", "r");
@@ -83,7 +83,7 @@ void quick_sort(int* data, int left, int right){
         quick_sort(data, left, i - 1);
         quick_sort(data, i + 1, right);
     } else {
-        insert_sort(data + left, right - left + 1 );// 对于小雨3个的元素，直接利用插入排序
+        insert_sort(data + left, right - left + 1 );// 对于小雨3个的元素，直接利用插入排序来进行排序
     }
 }
 
