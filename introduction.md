@@ -23,7 +23,7 @@
     
 3. 最后推荐的是刚出不久的一本算法书——[《Algorithm》](https://book.douban.com/subject/10432347/)
 	- 英文版：[下载](https://pan.baidu.com/s/1kVz0IFX)
-        -  中文版：[下载](https://pan.baidu.com/s/1eSofCDc)
+        - 中文版：[下载](https://pan.baidu.com/s/1eSofCDc)
    
 4.  附录：
 	- LeetCode题解，中文版：[下载地址](https://pan.baidu.com/s/1eSofCDc)
