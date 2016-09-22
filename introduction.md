@@ -20,11 +20,13 @@
 	- 英文版：[下载](https://pan.baidu.com/s/1hs0SJeG)
 	- 习题解答：[下载](https://pan.baidu.com/s/1pKSO8J5)
     
-    
-3. 最后推荐的是刚出不久的一本算法书——[《Algorithm》](https://book.douban.com/subject/10432347/)
+3. 然后是《数据结构与算法分析--JavaScript语言描述》
+	- 中文版：[下载](https://pan.baidu.com/s/1i54U185)
+	
+4. 最后推荐的是刚出不久的一本算法书——[《Algorithm》](https://book.douban.com/subject/10432347/)
 	- 英文版：[下载](https://pan.baidu.com/s/1kVz0IFX)
         - 中文版：[下载](https://pan.baidu.com/s/1eSofCDc)
    
-4.  附录：
+5.  附录：
 	- LeetCode题解，中文版：[下载地址](https://pan.baidu.com/s/1eSofCDc)
         - 经典算法大全：[下载地址](https://pan.baidu.com/s/1mhBZDvq)
