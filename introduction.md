@@ -13,21 +13,18 @@
 
 
 ----------
-1.  首先推荐的当然是入门的经典之作 ——[《数据结构与算法分析--C语言描述》](https://book.douban.com/subject/1139426/)。
-![](https://img3.doubanio.com/lpic/s1106991.jpg)
+1.  首先推荐的当然是入门的经典之作 ——[《数据结构与算法分析--C语言描述》](https://book.douban.com/subject/1139426/)。![](https://img3.doubanio.com/lpic/s1106991.jpg)
 	- 中文版：[下载](https://pan.baidu.com/s/1c1TkTSc)
 	- 英文版：[下载](https://pan.baidu.com/s/1boFFP63)
 	- [课后习题解答（英文版）](https://www.quora.com/Is-there-an-answer-book-to-the-Data-Structures-and-Algorithm-Analysis-in-C++-by-Mark-Allen-Weiss-in-his-fourth-edition)
 
-2. 然后是经典的算法书——[《算法导论》](https://book.douban.com/subject/1885170/)
-![](https://img1.doubanio.com/lpic/s1959967.jpg)
+2. 然后是经典的算法书——[《算法导论》](https://book.douban.com/subject/1885170/)![](https://img1.doubanio.com/lpic/s1959967.jpg)
 	- 中文版：[下载](https://pan.baidu.com/s/1bpzbdT1)
 	- 英文版：[下载](https://pan.baidu.com/s/1hs0SJeG)
 	- 习题解答：[下载](https://pan.baidu.com/s/1pKSO8J5)
     
     
-3. 最后推荐的是刚出不久的一本算法书——[《Algorithm》](https://book.douban.com/subject/10432347/)
-![](https://img1.doubanio.com/lpic/s8938479.jpg)
+3. 最后推荐的是刚出不久的一本算法书——[《Algorithm》](https://book.douban.com/subject/10432347/)![](https://img1.doubanio.com/lpic/s8938479.jpg)
 	- 英文版：[下载](https://pan.baidu.com/s/1kVz0IFX)
    -  中文版：[下载](https://pan.baidu.com/s/1eSofCDc)
    
